@@ -1,0 +1,9 @@
+services:
+  agent-system:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - TAVILY_API_KEY=${TAVILY_API_KEY}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
